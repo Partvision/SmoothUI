@@ -46,3 +46,61 @@ end)
 SettingsTab:AddTextInput("Multiplier (Numbers Only)...", true, function(val)
     print("Numeric Input:", val)
 end)
+
+API Reference
+Library.new(titleText)
+Creates the primary UI window container.
+
+Parameters:
+
+titleText (string): Title displayed in the top header bar.
+
+Returns: Window Instance
+
+Window:CreateTab(name)
+Creates a new navigational tab on the left sidebar.
+
+Parameters:
+
+name (string): Label displayed on the tab button.
+
+Returns: Tab Instance
+
+Tab Methods
+Tab:AddButton(text, callback)
+Creates a clickable button with hover and press animations.
+
+text (string): Button text display.
+
+callback (function): Function triggered on click.
+
+Tab:AddToggle(text, defaultState, callback)
+Creates an animated toggle switch.
+
+text (string): Toggle label text.
+
+defaultState (boolean): Initial active state (true/false).
+
+callback (function): Returns state (boolean) when toggled.
+
+Tab:AddSlider(text, min, max, defaultVal, callback)
+Creates a draggable slider control.
+
+text (string): Label text.
+
+min (number): Minimum value.
+
+max (number): Maximum value.
+
+defaultVal (number): Starting value.
+
+callback (function): Returns value (number) on change.
+
+Tab:AddTextInput(placeholder, numericOnly, callback)
+Creates an animated input box.
+
+placeholder (string): Placeholder text displayed when empty.
+
+numericOnly (boolean): Strips non-numeric characters on focus loss if true.
+
+callback (function): Returns text (string) and enterPressed (boolean) on focus lost.
